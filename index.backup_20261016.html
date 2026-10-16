@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WINHUB (3D Capsule Test)</title>
+  <link rel="stylesheet" href="assets/css/style-test.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+        }
+      }
+  </script>
+</head>
+
+<body class="main-page">
+  <!-- Placeholders for dynamically loaded content -->
+  <div id="loader-placeholder"></div>
+  <div id="header-placeholder"></div>
+  <div id="menu-overlay-placeholder"></div>
+
+  <!-- Background elements -->
+  <div class="bar"></div>
+  <div id="threejs-background-container"></div>
+  <div class="canvas-cont">
+    <canvas id="canvas3d"></canvas>
+  </div>
+  <!-- Custom Cyber Pointer Cursor -->
+  <div id="custom-cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+  <!-- Micro-Particle Text Explode Canvas Overlay -->
+  <canvas id="particle-text-canvas"></canvas>
+
+  <!-- Main Content Section -->
+  <section class="part-container">
+    <div id="hero" class="flex row">
+      <div class="container">
+        <!-- MODIFIED: Wrapper for hero text elements for better positioning control -->
+        <div class="hero-text-block">
+          <div class="com-name-ani">WINHUB</div>
+          <div class="headline">
+            <div>CONNECTS</div>
+            <div>TO EMPOWER</div>
+            <div>YOUR</div>
+            <div>SUCCESS</div>
+          </div>
+        </div>
+      </div>
+      <p class="scroll-icon"><span class="scroll"></span></p>
+    </div>
+
+    <!-- Part 1: Advantage Section -->
+    <!-- ==========================================================================
+         [PRESERVED BACKUP] Part 1: Advantage Section (기존 원본 보존 주석)
+         ========================================================================== -->
+    <!--
+    <div id="part1" class="flex row">
+      <div class="part1-info flex column text">
+        <div class="sub-title">WINHUB ADVANTAGE</div>
+        <div class="advantage-cards-grid">
+          <div class="advantage-card">
+            <div class="advantage-icon"><i class="fas fa-microchip"></i></div>
+            <h2>혁신을 선도하는 기술력</h2>
+            <p>
+              WINHUB는 AI, Cloud, Big Data 등 최신 기술 트렌드를 깊이 있게
+              이해하고, 이를 고객의 비즈니스에 실제 적용하여 복잡한 기술적
+              과제를 해결합니다. 변화하는 시장에서 고객이 항상 한발 앞서 나갈
+              수 있도록 혁신적인 기술 솔루션을 제공합니다.
+            </p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon"><i class="fas fa-users-cog"></i></div>
+            <h2>고객 중심의 맞춤형 전략</h2>
+            <p>
+              단순한 솔루션 공급을 넘어, 고객의 비즈니스 목표와 고유한 환경을
+              정확히 분석하고 이해합니다. 맞춤형 컨설팅부터 시스템 구축,
+              안정적인 운영 및 지속적인 가치 창출까지, 고객 성공을 위한 최적의
+              전략을 제시하고 실행합니다.
+            </p>
+          </div>
+          <div class="advantage-card">
+            <div class="advantage-icon"><i class="fas fa-medal"></i></div>
+            <h2>신뢰할 수 있는 수행능력</h2>
+            <p>
+              다양한 산업 분야에서 축적한 풍부한 SI 프로젝트 경험과 성공
+              사례는 WINHUB의 강력한 자산입니다. 검증된 방법론과 안정적인
+              프로젝트 관리 능력을 바탕으로, 약속된 기간 내에 최고 품질의
+              결과물을 제공하여 고객의 신뢰에 보답합니다.
+            </p>
+          </div>
+        </div>
+        <div class="integrated-value-card">
+          <div class="integrated-value-icon">
+            <i class="fas fa-sitemap"></i>
+          </div>
+          <h2>통합 시너지로 완성하는 고객의 성공</h2>
+          <p>
+            WINHUB는 기술 리더십, 고객 맞춤 전략, 그리고 검증된 수행능력을
+            유기적으로 결합하여 개별 솔루션을 넘어선 강력한 통합 시너지를
+            창출합니다. 우리는 고객의 비즈니스가 디지털 시대에 지속적으로
+            성장하고 성공할 수 있도록 가장 신뢰받는 파트너가 될 것을
+            약속드립니다.
+          </p>
+        </div>
+      </div>
+    </div>
+    -->
+
+    <!-- Part 1: Advantage Section (신규: 무박스 심볼릭 SVG & 단계별 스크롤 연출) -->
+    <div id="part1" class="flex row advantage-pin-section">
+      <div class="part1-info flex column text advantage-pin-inner">
+        <div class="sub-title">WINHUB ADVANTAGE</div>
+
+        <!-- Main Open Canvas Stage -->
+        <div class="advantage-open-stage">
+
+          <!-- Relative Interconnect SVG Spine (배경 유기적 연결 곡선망) -->
+          <svg class="advantage-stream-svg" viewBox="0 0 1200 480" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="streamGrad1" x1="0%" y1="0%" x2="50%" y2="100%">
+                <stop offset="0%" stop-color="#00f0ff" stop-opacity="1" />
+                <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.9" />
+              </linearGradient>
+              <linearGradient id="streamGrad2" x1="50%" y1="0%" x2="50%" y2="100%">
+                <stop offset="0%" stop-color="#2dd4bf" stop-opacity="1" />
+                <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.9" />
+              </linearGradient>
+              <linearGradient id="streamGrad3" x1="100%" y1="0%" x2="50%" y2="100%">
+                <stop offset="0%" stop-color="#fbbf24" stop-opacity="1" />
+                <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.9" />
+              </linearGradient>
+              <filter id="svgStreamGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="3.5" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- 3 Streams flowing from Sectors 1, 2, 3 into central Synergy hub (x=600, y=420) -->
+            <path class="stream-wire wire-1" d="M 200 170 C 200 290, 560 300, 570 410" stroke="url(#streamGrad1)" stroke-width="2.5" fill="none" filter="url(#svgStreamGlow)" />
+            <path class="stream-wire wire-2" d="M 600 170 C 600 270, 600 320, 600 410" stroke="url(#streamGrad2)" stroke-width="2.8" fill="none" filter="url(#svgStreamGlow)" />
+            <path class="stream-wire wire-3" d="M 1000 170 C 1000 290, 640 300, 630 410" stroke="url(#streamGrad3)" stroke-width="2.5" fill="none" filter="url(#svgStreamGlow)" />
+
+            <!-- Traveling Energy Particles along wires -->
+            <circle class="travel-dot dot-1" r="4" fill="#00f0ff" filter="url(#svgStreamGlow)">
+              <animateMotion path="M 200 170 C 200 290, 560 300, 570 410" dur="2.2s" repeatCount="indefinite" />
+            </circle>
+            <circle class="travel-dot dot-2" r="4.5" fill="#2dd4bf" filter="url(#svgStreamGlow)">
+              <animateMotion path="M 600 170 C 600 270, 600 320, 600 410" dur="1.8s" repeatCount="indefinite" />
+            </circle>
+            <circle class="travel-dot dot-3" r="4" fill="#fbbf24" filter="url(#svgStreamGlow)">
+              <animateMotion path="M 1000 170 C 1000 290, 640 300, 630 410" dur="2.4s" repeatCount="indefinite" />
+            </circle>
+          </svg>
+
+          <!-- 3 Upper Sectors (Open Symbolic Elements) -->
+          <div class="advantage-upper-sectors">
+
+            <!-- Sector 1: Tech Innovation -->
+            <div class="symbolic-sector sector-step-1" data-step="1">
+              <div class="symbol-svg-box">
+                <svg class="big-symbol-svg" viewBox="0 0 120 120" aria-label="기술 혁신 심볼">
+                  <defs>
+                    <filter id="symGlow1" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="3" result="b" />
+                      <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+                    </filter>
+                  </defs>
+                  <!-- Rotating Concentric Hex & Neural Grid -->
+                  <circle cx="60" cy="60" r="50" class="sym-orbit-ring ring-cyan" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="6 4" fill="none" opacity="0.6" />
+                  <rect x="36" y="36" width="48" height="48" rx="8" class="sym-core-frame" stroke="#ffffff" stroke-width="2" fill="none" filter="url(#symGlow1)" />
+                  <rect x="46" y="46" width="28" height="28" rx="4" class="sym-chip-center" fill="#00f0ff" opacity="0.9" filter="url(#symGlow1)" />
+                  <line x1="60" y1="10" x2="60" y2="36" stroke="#00f0ff" stroke-width="2" />
+                  <line x1="60" y1="84" x2="60" y2="110" stroke="#00f0ff" stroke-width="2" />
+                  <line x1="10" y1="60" x2="36" y2="60" stroke="#00f0ff" stroke-width="2" />
+                  <line x1="84" y1="60" x2="110" y2="60" stroke="#00f0ff" stroke-width="2" />
+                  <circle cx="60" cy="10" r="3" fill="#ffffff" />
+                  <circle cx="60" cy="110" r="3.5" class="anchor-point" fill="#00f0ff" filter="url(#symGlow1)" />
+                  <circle cx="10" cy="60" r="3" fill="#ffffff" />
+                  <circle cx="110" cy="60" r="3" fill="#ffffff" />
+                  <circle cx="60" cy="60" r="5" class="sym-pulse-dot" fill="#ffffff" />
+                </svg>
+              </div>
+              <div class="symbol-content">
+                <span class="sector-code">01 · TECH INNOVATION</span>
+                <h3 class="sector-title-bright">기술 혁신</h3>
+                <p class="sector-desc-clean">
+                  AI · 클라우드 · 빅데이터 아키텍처를 엔터프라이즈 환경에 최적화하여 구현
+                </p>
+                <div class="sector-chip-list">
+                  <span class="sector-chip">#AI솔루션</span>
+                  <span class="sector-chip">#클라우드</span>
+                  <span class="sector-chip">#빅데이터</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sector 2: Custom Strategy -->
+            <div class="symbolic-sector sector-step-2" data-step="2">
+              <div class="symbol-svg-box">
+                <svg class="big-symbol-svg" viewBox="0 0 120 120" aria-label="맞춤 전략 심볼">
+                  <defs>
+                    <filter id="symGlow2" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="3" result="b" />
+                      <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+                    </filter>
+                  </defs>
+                  <!-- Rotating Radar Rings & Crosshairs -->
+                  <circle cx="60" cy="60" r="52" class="sym-orbit-ring ring-mint" stroke="#2dd4bf" stroke-width="1.4" stroke-dasharray="4 4" fill="none" opacity="0.6" />
+                  <circle cx="60" cy="60" r="36" class="sym-mid-ring" stroke="#ffffff" stroke-width="1.8" fill="none" opacity="0.9" />
+                  <circle cx="60" cy="60" r="18" class="sym-inner-ring" stroke="#2dd4bf" stroke-width="2" fill="none" />
+                  <line x1="60" y1="8" x2="60" y2="112" stroke="#2dd4bf" stroke-width="1.5" opacity="0.4" />
+                  <line x1="8" y1="60" x2="112" y2="60" stroke="#2dd4bf" stroke-width="1.5" opacity="0.4" />
+                  <!-- Rotating Radar Scanner Sweep -->
+                  <g class="sym-radar-scanner">
+                    <line x1="60" y1="60" x2="60" y2="12" stroke="#ffffff" stroke-width="2.5" filter="url(#symGlow2)" />
+                    <polygon points="60,60 60,12 88,24" fill="#2dd4bf" opacity="0.3" />
+                  </g>
+                  <circle cx="78" cy="42" r="3.5" class="sym-blip-target" fill="#2dd4bf" filter="url(#symGlow2)" />
+                  <circle cx="60" cy="112" r="3.5" class="anchor-point" fill="#2dd4bf" filter="url(#symGlow2)" />
+                  <circle cx="60" cy="60" r="5" class="sym-pulse-dot" fill="#ffffff" />
+                </svg>
+              </div>
+              <div class="symbol-content">
+                <span class="sector-code">02 · CUSTOM STRATEGY</span>
+                <h3 class="sector-title-bright">맞춤 전략</h3>
+                <p class="sector-desc-clean">
+                  고객 비즈니스 환경을 정밀 분석해 컨설팅부터 시스템 구축 및 운영 로드맵 설계
+                </p>
+                <div class="sector-chip-list">
+                  <span class="sector-chip">#비즈니스분석</span>
+                  <span class="sector-chip">#맞춤컨설팅</span>
+                  <span class="sector-chip">#최적로드맵</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sector 3: Proven Execution -->
+            <div class="symbolic-sector sector-step-3" data-step="3">
+              <div class="symbol-svg-box">
+                <svg class="big-symbol-svg" viewBox="0 0 120 120" aria-label="신뢰 수행력 심볼">
+                  <defs>
+                    <filter id="symGlow3" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="3" result="b" />
+                      <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+                    </filter>
+                  </defs>
+                  <!-- Hexagonal Shield & Dynamic Verified Checkmark -->
+                  <polygon points="60,14 102,36 102,84 60,106 18,84 18,36" class="sym-shield-outer" stroke="#fbbf24" stroke-width="2" fill="none" opacity="0.85" filter="url(#symGlow3)" />
+                  <polygon points="60,26 90,42 90,78 60,94 30,78 30,42" class="sym-shield-inner" stroke="#ffffff" stroke-width="1.6" stroke-dasharray="5 3" fill="none" opacity="0.8" />
+                  <path class="sym-shield-check" d="M44,60 L54,72 L78,46" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#symGlow3)" />
+                  <circle cx="60" cy="14" r="3" fill="#ffffff" />
+                  <circle cx="102" cy="36" r="3" fill="#fbbf24" />
+                  <circle cx="18" cy="36" r="3" fill="#fbbf24" />
+                  <circle cx="60" cy="106" r="3.5" class="anchor-point" fill="#fbbf24" filter="url(#symGlow3)" />
+                </svg>
+              </div>
+              <div class="symbol-content">
+                <span class="sector-code">03 · PROVEN EXECUTION</span>
+                <h3 class="sector-title-bright">신뢰 수행력</h3>
+                <p class="sector-desc-clean">
+                  다년간 축적된 대형 SI 프로젝트 노하우와 검증된 품질 관리 방법론으로 무결점 납기 보증
+                </p>
+                <div class="sector-chip-list">
+                  <span class="sector-chip">#엔터프라이즈SI</span>
+                  <span class="sector-chip">#품질보증</span>
+                  <span class="sector-chip">#안정적납기</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Converged Hub: Integrated Synergy -->
+          <div class="advantage-lower-hub sector-step-4" data-step="4">
+            <div class="synergy-hub-symbol-wrap">
+              <svg class="large-synergy-svg" viewBox="0 0 140 140" aria-label="통합 시너지 퀀텀 코어">
+                <defs>
+                  <linearGradient id="hubCoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00f0ff" />
+                    <stop offset="50%" stop-color="#60a5fa" />
+                    <stop offset="100%" stop-color="#c084fc" />
+                  </linearGradient>
+                  <filter id="hubGlow" x="-30%" y="-30%" width="160%" height="160%">
+                    <feGaussianBlur stdDeviation="4" result="b" />
+                    <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+                  </filter>
+                </defs>
+                <!-- Concentric Quantum Reactor Orbital Rings -->
+                <circle cx="70" cy="70" r="60" class="hub-orbit orbit-a" stroke="#00f0ff" stroke-width="1.8" stroke-dasharray="10 5" fill="none" opacity="0.8" />
+                <circle cx="70" cy="70" r="44" class="hub-orbit orbit-b" stroke="#ffffff" stroke-width="2" stroke-dasharray="6 6" fill="none" />
+                <circle cx="70" cy="70" r="28" class="hub-orbit orbit-c" stroke="#c084fc" stroke-width="1.5" fill="none" />
+                <!-- Triple Converging Rays -->
+                <g class="hub-flux-rays">
+                  <line x1="70" y1="70" x2="70" y2="16" stroke="#00f0ff" stroke-width="2.5" />
+                  <line x1="70" y1="70" x2="26" y2="95" stroke="#2dd4bf" stroke-width="2.5" />
+                  <line x1="70" y1="70" x2="114" y2="95" stroke="#fbbf24" stroke-width="2.5" />
+                </g>
+                <!-- Center Core -->
+                <circle cx="70" cy="70" r="16" class="hub-core-sphere" fill="url(#hubCoreGrad)" filter="url(#hubGlow)" />
+                <circle cx="70" cy="70" r="6" class="hub-heart" fill="#ffffff" />
+                <!-- Orbiting Nodes -->
+                <circle cx="70" cy="10" r="4" fill="#00f0ff" filter="url(#hubGlow)" />
+                <circle cx="18" cy="100" r="4" fill="#2dd4bf" filter="url(#hubGlow)" />
+                <circle cx="122" cy="100" r="4" fill="#fbbf24" filter="url(#hubGlow)" />
+              </svg>
+            </div>
+            <div class="synergy-hub-content">
+              <span class="sector-code code-synergy">04 · INTEGRATED SYNERGY</span>
+              <h3 class="sector-title-bright title-synergy">통합 시너지</h3>
+              <p class="sector-desc-clean desc-synergy">
+                기술 리더십 · 고객 맞춤 전략 · 검증된 수행력이 유기적으로 결합하여 압도적인 디지털 성장 가치를 창출합니다.
+              </p>
+              <div class="sector-chip-list chips-synergy">
+                <span class="sector-chip active">#기술선도</span>
+                <span class="sector-chip active">#맞춤전략</span>
+                <span class="sector-chip active">#성공실현</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Part 2: Works Section -->
+    <div id="part2" class="flex row">
+      <div class="part2-info flex column">
+        <div class="sub-title">WORKS</div>
+        <div class="works-carousel-wrapper">
+          <button class="works-nav-btn prev-btn" aria-label="Previous Work">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="works-list-container">
+            <ul class="works-list">
+              <!-- Work items populated dynamically for infinite carousel loop -->
+            </ul>
+          </div>
+          <button class="works-nav-btn next-btn" aria-label="Next Work">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <button class="goto-work" onclick="location.href='page-test/works.html'">
+          Go To WorkList
+          <span class="menu-link-arrow">
+            <svg class="menu-link-hover-svg goto-works" viewBox="0 0 217.41 63.21" aria-hidden="true">
+              <g>
+                <polyline class="arrow-path" points="0 62.21 215 62.21 153.5 .71" />
+              </g>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Part 3: Outro Section -->
+    <div id="part3" class="flex row">
+      <div class="part3-info flex column text">
+        <div class="sub-title">YOUR SUCCESS PARTNER</div>
+        <div class="outro-content">
+          <h2>함께 만들어갈 디지털 혁신, <br />지금 WINHUB와 시작하세요.</h2>
+          <p>
+            WINHUB는 단순한 시스템 구축을 넘어, 고객 비즈니스의 성공적인
+            디지털 전환을 위한 진정한 파트너십을 추구합니다. 다년간 축적된 SI
+            분야의 전문성과 끊임없는 기술 혁신을 통해 고객에게 최고의 가치를
+            제공할 것을 약속드립니다.
+          </p>
+          <p>
+            귀사의 비즈니스에 최적화된 맞춤형 솔루션이 궁금하십니까? 지금 바로
+            WINHUB의 전문가와 상담하세요. 숙련된 컨설턴트가 친절하게 안내해
+            드리며, 귀사의 성공적인 미래 설계를 위한 최적의 로드맵을 제시해
+            드립니다.
+          </p>
+          <button onclick="location.href='page-test/contact.html'" class="cta-button">
+            프로젝트 문의하기
+            <span class="menu-link-arrow">
+              <svg class="menu-link-hover-svg goto-works" viewBox="0 0 217.41 63.21" aria-hidden="true">
+                <g>
+                  <polyline class="arrow-path" points="0 62.21 215 62.21 153.5 .71" />
+                </g>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer and Scroll to Top Button -->
+  <div id="footer-placeholder"></div>
+  <button id="scrollToTopBtn" title="위로 가기">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script type="module" src="./assets/js/fluid-background.js"></script>
+  <script type="module" src="./assets/js/main-test-app.js"></script>
+</body>
+
+</html>

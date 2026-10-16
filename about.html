@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us · WINHUB Enterprise Digital Architecture</title>
+  <meta name="description" content="WINHUB 기업 소개 - 기업 철학, 주요 연혁 및 4대 핵심 가치 (신뢰, 정밀, 혁신, 시너지)">
+
+  <!-- Google Fonts: Inter, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CoMinVi Unified Architecture Stylesheet -->
+  <link rel="stylesheet" href="assets/css/flux-architecture.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       SCROLL-AWARE PUSH HEADER
+       ======================================================================== -->
+  <header class="push-header" id="mainHeader">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index_flux.html" class="logo-brand">
+          <span class="logo-badge">W</span>
+          WINHUB
+        </a>
+      </div>
+
+      <div class="header-center">
+        <h2 id="headerPageTitle" class="header-page-title">About Us</h2>
+      </div>
+
+      <div class="header-right">
+        <nav class="gnb-nav">
+          <a href="index_flux.html" class="gnb-link">Home</a>
+          <a href="about.html" class="gnb-link active">About Us</a>
+          <a href="works.html" class="gnb-link">Works</a>
+          <a href="contact.html" class="gnb-link">Contact Us</a>
+        </nav>
+
+        <button class="menu-trigger" id="drawerTrigger" aria-label="Open Navigation">
+          <span>Menu</span>
+          <span class="menu-icon-circle"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       PAGE LAYOUT WRAPPER (Pushed down when header reveals)
+       ======================================================================== -->
+  <div class="page-layout-wrapper" id="pageLayoutWrapper">
+
+    <!-- VIEWPORT CARD CONTAINER (Shrinks on navigation) -->
+    <div class="view-card-container" id="viewCardContainer">
+
+      <main class="router-viewport" id="routerViewport">
+        <div class="subpage-container">
+          
+          <div class="subpage-header">
+            <div class="act-tag tag-cyan">WIN-UI-S01 // ABOUT WINHUB</div>
+            <h1 class="subpage-title">TECHNOLOGY THAT<br>CONNECTS TOMORROW</h1>
+          </div>
+
+          <div class="about-grid">
+            <div>
+              <p class="about-lead">
+                WINHUB은 기술에 대한 깊은 이해와 고객 중심의 엔지니어링 철학을 바탕으로, 엔터프라이즈 환경에서 검증된 최적의 IT 솔루션을 설계하고 실행합니다.
+              </p>
+
+              <div class="metrics-editorial-quote" style="margin-top: 36px;">
+                "우리는 단순한 시스템 공급사가 아닌, 고객 비즈니스의 차세대 성장을 이끄는 든든한 기술 파트너입니다."
+                <br><br>
+                <strong>— WINHUB 대표이사 신진우</strong>
+              </div>
+
+              <div style="margin-top: 40px; display: flex; gap: 16px;">
+                <a href="works.html" class="hero-trigger-btn" style="padding: 12px 28px; font-size: 12px;">
+                  Explore Our Works →
+                </a>
+                <a href="contact.html" class="hero-trigger-btn" style="background: transparent; color: var(--text-white); border: 1px solid var(--hairline); padding: 12px 28px; font-size: 12px;">
+                  Contact Engineers
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <div class="schematic-box" style="height: 360px;">
+                <div class="schematic-header">
+                  <span>WINHUB CORE TIMELINE</span>
+                  <span>SINCE 2010</span>
+                </div>
+                <div style="padding: 28px; font-family: var(--font-mono); font-size: 13px; color: var(--text-muted); line-height: 2.2;">
+                  <div><strong style="color: var(--accent-cyan);">2024</strong> · 차세대 AI & 무인 스마트 POS 솔루션 상용화</div>
+                  <div><strong style="color: var(--accent-cyan);">2023</strong> · 대기업 전사 ERP 및 클라우드 통합 관제 수주</div>
+                  <div><strong style="color: var(--accent-cyan);">2020</strong> · 엔터프라이즈 DX 전문 솔루션 라인업 완성</div>
+                  <div><strong style="color: var(--accent-cyan);">2015</strong> · 유통/결제/POS 산업군 솔루션 점유율 1위 달성</div>
+                  <div><strong style="color: var(--accent-cyan);">2010</strong> · WINHUB 법인 설립 및 R&D 엔지니어링 센터 개소</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-t-hairline" style="padding-top: 60px;">
+            <div class="act-tag tag-mint">CORE VALUES</div>
+            <h3 style="font-family: var(--font-display); font-size: 32px; font-weight: 800; margin-top: 8px; margin-bottom: 32px;">4대 핵심 가치 (Core Philosophy)</h3>
+            
+            <div class="values-grid">
+              <div class="value-card">
+                <h4>01. 신뢰 (Trust)</h4>
+                <p>엄격한 가용성과 데이터 무결성을 보장하며, 약속한 기일 내에 시스템을 무결점으로 납기합니다.</p>
+              </div>
+              <div class="value-card">
+                <h4>02. 정밀 (Precision)</h4>
+                <p>360도 환경 분석을 통해 고객사 비즈니스 로직에 1:1로 맞춘 정밀 커스텀 아키텍처를 설계합니다.</p>
+              </div>
+              <div class="value-card">
+                <h4>03. 혁신 (Innovation)</h4>
+                <p>AI, 클라우드, 분산 데이터 처리 등 검증된 최신 기술을 과감히 도입하여 지속 가능한 기술 격차를 만듭니다.</p>
+              </div>
+              <div class="value-card">
+                <h4>04. 시너지 (Synergy)</h4>
+                <p>고객, 파트너, 엔지니어가 유기적으로 융합되어 하나의 강력한 퀀텀 에너지를 만들어냅니다.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+      <!-- GLOBAL FOOTER -->
+      <footer class="global-footer">
+        <div class="footer-container">
+          <div class="footer-col-brand">
+            <div class="logo-brand">
+              <span class="logo-badge">W</span>
+              WINHUB
+            </div>
+            <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
+              차세대 엔터프라이즈 솔루션 및 디지털 아키텍처 파트너.<br>
+              고객의 미래를 연결하는 확고한 기술력을 제공합니다.
+            </p>
+          </div>
+
+          <div class="footer-col-nav">
+            <div class="footer-nav-group">
+              <span class="footer-nav-title">Navigation</span>
+              <a href="index_flux.html" class="footer-nav-link">Home</a>
+              <a href="about.html" class="footer-nav-link">About Us</a>
+              <a href="works.html" class="footer-nav-link">Works</a>
+              <a href="contact.html" class="footer-nav-link">Contact Us</a>
+            </div>
+
+            <div class="footer-nav-group">
+              <span class="footer-nav-title">Architecture</span>
+              <span class="footer-nav-link" style="color: var(--text-dim);">CoMinVi Hairline Grid</span>
+              <span class="footer-nav-link" style="color: var(--text-dim);">Push-Down Scroll Header</span>
+              <span class="footer-nav-link" style="color: var(--text-dim);">Multi-Page PJAX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>WINHUB Inc. · 대표이사 신진우 · 사업자등록번호 128-86-63300</span>
+          <span>GNB: [ Home · About Us · Works · Contact Us ] 준수</span>
+        </div>
+      </footer>
+
+    </div><!-- End #viewCardContainer -->
+
+  </div><!-- End #pageLayoutWrapper -->
+
+  <!-- CURTAIN DRAWER OVERLAY -->
+  <div class="curtain-drawer" id="curtainDrawer">
+    <div class="drawer-top">
+      <div class="logo-brand">
+        <span class="logo-badge">W</span>
+        WINHUB ARCHITECTURE
+      </div>
+      <button class="drawer-close" id="drawerClose">CLOSE ✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <ul class="drawer-menu-list">
+        <li><a href="index_flux.html" class="drawer-menu-link"><span class="idx">01</span> HOME</a></li>
+        <li><a href="about.html" class="drawer-menu-link"><span class="idx">02</span> ABOUT US</a></li>
+        <li><a href="works.html" class="drawer-menu-link"><span class="idx">03</span> WORKS</a></li>
+        <li><a href="contact.html" class="drawer-menu-link"><span class="idx">04</span> CONTACT US</a></li>
+      </ul>
+
+      <div class="drawer-sidebar">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-cyan); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px;">Enterprise Positioning</div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
+            WINHUB은 차세대 POS/SCO 및 대규모 엔터프라이즈 ERP/클라우드 아키텍처를 설계하는 IT 솔루션 전문 기업입니다.
+          </p>
+        </div>
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--accent-cyan); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px;">Headquarters</div>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
+            경기도 고양시 일산동구 백마로 195 SK M-City 9005호<br>
+            Tel: 031-908-7711 · Email: contact@winhub.co.kr
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer-bottom">
+      <span>CoMinVi Minimalist Hairline Architecture · Multi-Page PJAX</span>
+      <span>Copyright © WINHUB. All Rights Reserved.</span>
+    </div>
+  </div>
+
+  <!-- Shared Router Script -->
+  <script src="assets/js/flux-router.js"></script>
+</body>
+</html>
