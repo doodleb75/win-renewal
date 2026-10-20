@@ -1,0 +1,74 @@
+ow-y: visible !important;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px !important;
+      height: 8px !important;
+      display: block !important;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #020617 !important;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 229, 255, 0.4) !important;
+      border-radius: 4px !important;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 229, 255, 0.8) !important;
+    }
+
+    /* 2. Video Full-Coverage */
+    #hero-bg-video,
+    .hero-background video,
+    .hero-background .background_video video,
+    video[data-cominvi-hero-intro-video="true"] {
+      display: block;
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      z-index: 1 !important;
+      pointer-events: none !important;
+    }
+
+    .hero-background,
+    .hero-background .background-inner,
+    .hero-background .background_video,
+    .hero-background .is-video {
+      display: flex !important;
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: 0 !important;
+    }
+
+    .hero-background .background_video {
+      background: #020617 !important;
+    }
+
+    /* 3. Hero Sequence Canvas - Guaranteed Display & Seamless Handoff */
+    canvas[data-loader-sequence-canvas="true"],
+    [data-loader-sequence-canvas="true"] {
+      display: block !important;
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      z-index: 2 !important;
+      pointer-events: none !important;
+    }
+  </style>
+
+  <style>
+    /* Clean horizontal centered menu drawer with push-down support */
+    #nav-inner.nav-inner {
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: center !important;
+      align-items: cente

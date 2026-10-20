@@ -1,0 +1,67 @@
+is-right">
+                        <path
+                          d="M0.343262 1.60947C0.343262 1.01554 1.06136 0.718095 1.48133 1.13807L5.52871 5.18545C5.78906 5.4458 5.78906 5.86791 5.52871 6.12826L1.48133 10.1756C1.06136 10.5956 0.343262 10.2982 0.343262 9.70423V1.60947Z"
+                          fill="#151515"></path>
+                      </svg><span class="button-sm_label">Works</span></div><svg xmlns="http://www.w3.org/2000/svg"
+                      width="100%" viewBox="0 0 6 11" fill="none" class="is-arrow">
+                      <path
+                        d="M0.343262 1.60947C0.343262 1.01554 1.06136 0.718095 1.48133 1.13807L5.52871 5.18545C5.78906 5.4458 5.78906 5.86791 5.52871 6.12826L1.48133 10.1756C1.06136 10.5956 0.343262 10.2982 0.343262 9.70423V1.60947Z"
+                        fill="#151515"></path>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-background">
+          <div class="background-overlay" style="background:rgba(2,6,23,0.35);z-index:2;position:absolute;inset:0;">
+          </div>
+          <div class="background-inner" style="width:100%;height:100%;position:relative;">
+            <div class="is-video w-embed" style="width:100%;height:100%;">
+              <div class="background_video w-background-video w-background-video-atom"
+                style="width:100%;height:100%;background:#020617;">
+                <video id="hero-bg-video" data-cominvi-hero-intro-video="true" autoplay loop muted playsinline
+                  src="assets/mp4/futuristic_key_opt.mp4" onloadedmetadata="this.playbackRate=0.5;"
+                  onplay="this.playbackRate=0.5;" style="width:100%;height:100%;object-fit:cover;display:block;"
+                  data-wf-ignore="true" data-object-fit="cover">
+                  <source src="assets/mp4/futuristic_key_opt.mp4" type="video/mp4" data-wf-ignore="true">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div bg="white" class="section_about" id="about">
+        <div class="intro">
+          <div class="eyebrows">
+            <div class="is-eyebrow"><span class="eyebrow-s">S.01</span></div>
+            <div class="is-eyebrow is-black">
+              <h2 class="eyebrow-s">About WINHUB</h2>
+            </div>
+          </div>
+          <p tr="1" class="body-xl is-black">WINHUB은 최적의 디지털 솔루션 제공과 혁신을 통해 고객 비즈니스의 성공을 지원하는 전문 IT 파트너입니다.<br /></p>
+        </div>
+        <div class="content">
+          <div class="content_column">
+            <div class="image-wrapper"><img
+                src="https://cdn.prod.website-files.com/6899a2f3f7995d5e3e31b7c6/68f79ce92fff59326446790a_home_01.avif"
+                loading="eager" sizes="(max-width: 1000px) 100vw, 1000px"
+                srcset="https://cdn.prod.website-files.com/6899a2f3f7995d5e3e31b7c6/68f79ce92fff59326446790a_home_01-p-500.avif 500w, https://cdn.prod.website-files.com/6899a2f3f7995d5e3e31b7c6/68f79ce92fff59326446790a_home_01.avif 1000w"
+                alt="Two miners wearing helmets with headlamps and holding flashlights inside a dark underground mine."
+                class="image-p is-portrait" /></div>
+          </div>
+          <div class="content_column align-r">
+            <div class="stats">
+              <div class="stats-card">
+                <div class="icon-wrap">
+                  <div data-wf-ignore="true" aria-hidden="true" data-lottie="11" class="service-icon_icon is-2"></div>
+                </div>
+                <div class="is-stat"><span class="stat_number">99.98%</span><span class="eyebrow-m is-o-60">System
+                    Uptime</span></div>
+              </div>
+              <div class="stats-card">
+                <div class="icon-wrap">
+                  <div data-wf-ignore="true" aria-hidden="true" data-lottie="12" class="service-icon_icon is-2"></div>
+                </div>
+                <div clas

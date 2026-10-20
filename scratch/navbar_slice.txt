@@ -1,0 +1,50 @@
+      }
+      </style>
+    </div>
+  </div>
+  <nav class="navbar"><a aria-label="home" href="/" aria-current="page" class="is-link w-inline-block w--current">
+      <div class="is-logo_main"
+        style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="4" stroke="#00e5ff" stroke-width="2.5" fill="none" />
+          <rect x="7" y="7" width="10" height="10" rx="2" fill="#00e5ff" />
+        </svg>
+        <span
+          style="font-family:'Syne',sans-serif;font-size:1.35rem;font-weight:900;letter-spacing:0.12em;color:#ffffff;line-height:1;">WINHUB</span>
+      </div>
+
+    </a>
+    <link rel="prefetch" href="/" /><button aria-expanded="false" aria-controls="nav-inner" aria-label="open menu"
+      class="is-menu">
+      <!-- <div class="is-menu_label-wrap">
+        <div class="is-menu_label-inner"><span class="is-label is-menu">Menu</span><span
+            class="is-label is-menu">Menu</span></div>
+      </div> -->
+      <div class="menu-icon">
+        <div class="menu-icon_bar is-1"></div>
+        <div class="menu-icon_bar is-2"></div>
+      </div><span class="sr-only">open menu</span>
+    </button>
+  </nav>
+  <div id="nav-inner" class="nav-inner">
+    <ul role="list" class="links nav-links-row">
+      <li class="link-item">
+        <a href="about.html" class="navlink w-inline-block">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none"
+            class="navlink_icon">
+            <rect width="32" height="32" rx="4" fill="currentColor" class="icon-bg"></rect>
+            <path
+              d="M14 10.9388C14 10.5487 14.4767 10.3533 14.7556 10.6292L19.8704 15.6903C20.0432 15.8614 20.0432 16.1386 19.8704 16.3097L14.7556 21.3708C14.4767 21.6467 14 21.4513 14 21.0612V10.9388Z"
+              fill="currentColor" class="icon--inner"></path>
+          </svg>
+          <span class="navlink_label">About Us</span>
+        </a>
+        <link rel="prefetch" href="about.html" />
+      </li>
+      <li class="link-item">
+        <a href="works.html" class="navlink w-inline-block">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none"
+            class="navlink_icon">
+            <rect width="32" height="32" rx="4" fill="currentColor" class="icon-bg"></rect>
+            <path
+              d="M14 10.9388C14 10.5487 14.4767 10.35

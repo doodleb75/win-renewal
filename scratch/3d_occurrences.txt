@@ -1,0 +1,19 @@
+=== SLIDE 2 === -> Text 13: · 3D 비주얼(3D WebGL) & 차세대 인터랙티브(엔지니어링 신뢰) 통합 모델
+=== SLIDE 2 === -> Text 38: · Three.js, GSAP 3.12, Video Player 기술 파이프라인
+=== SLIDE 3 === -> Text 27: 시네마틱 3D 비주얼 + 엔터프라이즈 신뢰 지표
+=== SLIDE 3 === -> Text 29: · futuristic_key.mp4 비디오와 Three.js가 시각적 압도감 제공
+=== SLIDE 4 === -> Text 20: · 3단계: fetch()로 신규 HTML 파싱 (Three.js 캔버스, 헤더 상태는 언마운트 없이 유지)
+=== SLIDE 5 === -> Text 24: · 3D 오브젝트 회전각, 조명 색상, SVG 신경망 와이어가 타임라인 체이닝으로 완벽 결합
+=== SLIDE 6 === -> [TABLE]: Graphics & Canvas | Three.js (WebGL 2.0) + Inline SVG | 저용량 3D 오브젝트, 360도 궤도 링, animateMotion 실시간 광원 입자 순환 | futuristic_key 비디오 + 3D 양자 코어
+=== SLIDE 12 === -> Text 39:   · GSAP ScrollTrigger 뷰포트 핀 고정 및 60FPS 모션 동기화  · Three.js 3D 캔버스 인터랙티브 렌더링
+=== SLIDE 13 === -> Text 38:   · GSAP ScrollTrigger 뷰포트 핀 고정 및 60FPS 모션 동기화  · Three.js 3D 캔버스 인터랙티브 렌더링
+=== SLIDE 14 === -> Text 53:   · GSAP ScrollTrigger 뷰포트 핀 고정 및 60FPS 모션 동기화  · Three.js 3D 캔버스 인터랙티브 렌더링
+=== SLIDE 16 === -> Text 38:   · GSAP ScrollTrigger 뷰포트 핀 고정 및 60FPS 모션 동기화  · Three.js 3D 캔버스 인터랙티브 렌더링
+=== SLIDE 17 === -> Text 44: ▶ [3D 비주얼 인터랙션]:
+=== SLIDE 17 === -> Text 44:   · Three.js 기반 궤도 회전 및 3D Canvas 시각 효과 탑재
+=== SLIDE 17 === -> TextBox 48: 서브페이지 - ABOUT US (기업 비전 & 3D 비주얼 히어로)
+=== SLIDE 18 === -> · GSAP & Three.js 인터랙티브 UI/UX
+=== SLIDE 18 === -> · 2x2 반응형 카드 그리드 & Three.js 파티클 배경 연동
+=== SLIDE 23 === -> Text 21: 3. Three.js r164 (WebGL 2.0)
+=== SLIDE 23 === -> Text 22: 3D 공간 연출 및 실시간 궤도 회전
+=== SLIDE 24 === -> Text 20: · Hero 비디오 배경 및 Three.js 카메라 연동

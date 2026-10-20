@@ -6,7 +6,9 @@
   <meta charset="utf-8" />
   <link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous" />
   <title>Contact Us · WINHUB Enterprise Digital Architecture</title>
-  <meta content="Connect with WINHUB engineers. Inquire about customized enterprise software architecture, POS/ERP solutions, and digital infrastructure." name="description" />
+  <meta
+    content="Connect with WINHUB engineers. Inquire about customized enterprise software architecture, POS/ERP solutions, and digital infrastructure."
+    name="description" />
   <meta content="Contact Us · WINHUB Enterprise Digital Architecture" property="og:title" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link
@@ -36,35 +38,52 @@
       background: rgba(0, 229, 255, 0.8) !important;
     }
 
-    .subpage_hero {
-      position: relative;
-      min-height: 70vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 12em var(--_spacings---site-margin, 2em) 6em;
-      background: linear-gradient(180deg, #020617 0%, #0d1527 60%, #111827 100%);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      overflow: hidden;
+    /* 2. Video Full-Coverage (Same as index_flux) */
+    #hero-bg-video,
+    .hero-background video,
+    .hero-background .background_video video,
+    video[data-cominvi-hero-intro-video="true"] {
+      display: block;
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      z-index: 1 !important;
+      pointer-events: none !important;
     }
 
-    .subpage_hero-bg {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 80% 20%, rgba(0, 229, 255, 0.09) 0%, transparent 55%),
-                  radial-gradient(circle at 20% 80%, rgba(244, 121, 32, 0.05) 0%, transparent 50%);
-      pointer-events: none;
-      z-index: 0;
+    .hero-background,
+    .hero-background .background-inner,
+    .hero-background .background_video,
+    .hero-background .is-video {
+      display: flex !important;
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute !important;
+      inset: 0 !important;
+      z-index: 0 !important;
     }
 
-    .subpage_hero-content {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 3em;
-      flex-wrap: wrap;
+    .hero-background .background_video {
+      background: #020617 !important;
+    }
+
+    .section_hero .is-h1-span {
+      opacity: 1 !important;
+    }
+
+    .section_hero .eyebrows {
+      display: none !important;
+    }
+
+    .section_hero .hero-content_left {
+      grid-column: span 8 / span 8;
+    }
+
+    .section_hero .hero-content_right {
+      grid-column: span 4 / span 4;
+      align-self: end;
     }
 
     .contact-layout {
@@ -175,7 +194,9 @@
       font-weight: 600;
     }
 
-    .form-input, .form-textarea, .form-select {
+    .form-input,
+    .form-textarea,
+    .form-select {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 0.35rem;
@@ -187,7 +208,9 @@
       outline: none;
     }
 
-    .form-input:focus, .form-textarea:focus, .form-select:focus {
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus {
       background: rgba(255, 255, 255, 0.06);
       border-color: rgba(0, 229, 255, 0.7);
       box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
@@ -245,6 +268,64 @@
       transform: translateY(-2px);
       box-shadow: 0 10px 25px rgba(0, 229, 255, 0.3);
     }
+    /* Clean horizontal centered menu drawer with push-down support (Same as index_flux) */
+    #nav-inner.nav-inner {
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: center !important;
+      align-items: center !important;
+      padding: 1.5rem 3rem !important;
+      box-sizing: border-box !important;
+      width: 100% !important;
+      height: auto !important;
+      min-height: auto !important;
+      position: fixed !important;
+      top: 5.625rem !important;
+      bottom: auto !important;
+      left: 0 !important;
+      right: 0 !important;
+      overflow: visible !important;
+    }
+
+    #nav-inner .nav-links-row {
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: clamp(2rem, 4vw, 4.5rem) !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+      list-style: none !important;
+    }
+
+    #nav-inner .navlink {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.6rem !important;
+      text-decoration: none !important;
+    }
+
+    #nav-inner .navlink .navlink_label {
+      font-size: clamp(1.4rem, 2.2vw, 2.4rem) !important;
+      font-weight: 700 !important;
+      letter-spacing: -0.02em !important;
+      white-space: nowrap !important;
+    }
+
+    #nav-inner .nav-right-cluster {
+      position: absolute !important;
+      right: 3rem !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      display: flex !important;
+      align-items: center !important;
+      margin: 0 !important;
+    }
+
+    #nav-inner .locale-switch {
+      display: inline-flex !important;
+      align-items: center !important;
+    }
   </style>
 </head>
 
@@ -291,75 +372,66 @@
 
   <!-- NAVIGATION DRAWER -->
   <div id="nav-inner" class="nav-inner">
-    <ul role="list" class="links">
-      <li class="link-item"><a href="about.html" class="navlink w-inline-block"><svg
-            xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 32 32" fill="none" class="navlink_icon">
+    <ul role="list" class="links nav-links-row">
+      <li class="link-item">
+        <a href="about.html" class="navlink w-inline-block">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none"
+            class="navlink_icon">
             <rect width="32" height="32" rx="4" fill="currentColor" class="icon-bg"></rect>
             <path
               d="M14 10.9388C14 10.5487 14.4767 10.3533 14.7556 10.6292L19.8704 15.6903C20.0432 15.8614 20.0432 16.1386 19.8704 16.3097L14.7556 21.3708C14.4767 21.6467 14 21.4513 14 21.0612V10.9388Z"
               fill="currentColor" class="icon--inner"></path>
-          </svg><span class="navlink_label">About Us</span></a>
+          </svg>
+          <span class="navlink_label">About Us</span>
+        </a>
         <link rel="prefetch" href="about.html" />
       </li>
-      <li class="link-item"><a href="works.html" class="navlink w-inline-block"><svg xmlns="http://www.w3.org/2000/svg"
-            width="100%" viewBox="0 0 32 32" fill="none" class="navlink_icon">
+      <li class="link-item">
+        <a href="works.html" class="navlink w-inline-block">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none"
+            class="navlink_icon">
             <rect width="32" height="32" rx="4" fill="currentColor" class="icon-bg"></rect>
             <path
               d="M14 10.9388C14 10.5487 14.4767 10.3533 14.7556 10.6292L19.8704 15.6903C20.0432 15.8614 20.0432 16.1386 19.8704 16.3097L14.7556 21.3708C14.4767 21.6467 14 21.4513 14 21.0612V10.9388Z"
               fill="currentColor" class="icon--inner"></path>
-          </svg><span class="navlink_label">Works</span></a>
+          </svg>
+          <span class="navlink_label">Works</span>
+        </a>
         <link rel="prefetch" href="works.html" />
       </li>
-      <li class="link-item"><a href="contact.html" class="navlink w-inline-block"><svg xmlns="http://www.w3.org/2000/svg"
-            width="100%" viewBox="0 0 32 32" fill="none" class="navlink_icon">
+      <li class="link-item">
+        <a href="contact.html" class="navlink w-inline-block">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none"
+            class="navlink_icon">
             <rect width="32" height="32" rx="4" fill="currentColor" class="icon-bg"></rect>
             <path
               d="M14 10.9388C14 10.5487 14.4767 10.3533 14.7556 10.6292L19.8704 15.6903C20.0432 15.8614 20.0432 16.1386 19.8704 16.3097L14.7556 21.3708C14.4767 21.6467 14 21.4513 14 21.0612V10.9388Z"
               fill="currentColor" class="icon--inner"></path>
-          </svg><span class="navlink_label">Contact Us</span></a>
+          </svg>
+          <span class="navlink_label">Contact Us</span>
+        </a>
         <link rel="prefetch" href="contact.html" />
       </li>
     </ul>
-    <ul role="list" class="links">
-      <li class="link-item"><a href="about.html" class="navlink w-inline-block"><svg xmlns="http://www.w3.org/2000/svg"
-            width="100%" viewBox="0 0 32 32" fill="none" class="navlink_icon">
-            <rect width="32" height="32" rx="4" fill="currentColor" class="icon-bg"></rect>
-            <path
-              d="M14 10.9388C14 10.5487 14.4767 10.3533 14.7556 10.6292L19.8704 15.6903C20.0432 15.8614 20.0432 16.1386 19.8704 16.3097L14.7556 21.3708C14.4767 21.6467 14 21.4513 14 21.0612V10.9388Z"
-              fill="currentColor" class="icon--inner"></path>
-          </svg><span class="navlink_label">About us</span></a>
-        <link rel="prefetch" href="about.html" />
-      </li>
-      <li class="link-item"><a href="works.html" class="navlink w-inline-block"><svg xmlns="http://www.w3.org/2000/svg"
-            width="100%" viewBox="0 0 32 32" fill="none" class="navlink_icon">
-            <rect width="32" height="32" rx="4" fill="currentColor" class="icon-bg"></rect>
-            <path
-              d="M14 10.9388C14 10.5487 14.4767 10.3533 14.7556 10.6292L19.8704 15.6903C20.0432 15.8614 20.0432 16.1386 19.8704 16.3097L14.7556 21.3708C14.4767 21.6467 14 21.4513 14 21.0612V10.9388Z"
-              fill="currentColor" class="icon--inner"></path>
-          </svg><span class="navlink_label">Works</span></a>
-        <link rel="prefetch" href="works.html" />
-      </li>
-      <li class="link-item"><a href="contact.html" class="navlink w-inline-block"><svg xmlns="http://www.w3.org/2000/svg"
-            width="100%" viewBox="0 0 32 32" fill="none" class="navlink_icon">
-            <rect width="32" height="32" rx="4" fill="currentColor" class="icon-bg"></rect>
-            <path
-              d="M14 10.9388C14 10.5487 14.4767 10.3533 14.7556 10.6292L19.8704 15.6903C20.0432 15.8614 20.0432 16.1386 19.8704 16.3097L14.7556 21.3708C14.4767 21.6467 14 21.4513 14 21.0612V10.9388Z"
-              fill="currentColor" class="icon--inner"></path>
-          </svg><span class="navlink_label">Contact</span></a>
-        <link rel="prerender" href="contact.html" />
-      </li>
-    </ul>
-    <ul role="list" class="links">
-      <li class="link-item"><a href="contact.html" class="navlink w-inline-block"><svg
-            xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 32 32" fill="none" class="navlink_icon">
-            <rect width="32" height="32" rx="4" fill="currentColor" class="icon-bg"></rect>
-            <path
-              d="M14 10.9388C14 10.5487 14.4767 10.3533 14.7556 10.6292L19.8704 15.6903C20.0432 15.8614 20.0432 16.1386 19.8704 16.3097L14.7556 21.3708C14.4767 21.6467 14 21.4513 14 21.0612V10.9388Z"
-              fill="currentColor" class="icon--inner"></path>
-          </svg><span class="navlink_label">Support</span></a>
-        <link rel="prefetch" href="contact.html" />
-      </li>
-    </ul>
+    <div class="nav-right-cluster">
+      <div data-hover="false" data-delay="0" class="locale-switch w-dropdown">
+        <div class="navlink locale-switch_toggle w-dropdown-toggle">
+          <div class="w-icon-dropdown-toggle"></div><span class="navlink_label">
+            <div>En</div>
+          </span>
+        </div>
+        <nav class="locale-switch_menu w-dropdown-list">
+          <div class="w-locales-list">
+            <div role="list" class="locales-list w-locales-items">
+              <div role="listitem" class="w-locales-item"><a hreflang="en" href="/" aria-current="page"
+                  class="navlink-locale w-inline-block w--current"><span class="navlink_label">En</span></a></div>
+              <div role="listitem" class="w-locales-item"><a hreflang="ko" href="/"
+                  class="navlink-locale w-inline-block"><span class="navlink_label">Ko</span></a></div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
   </div>
 
   <div class="page-info">
@@ -374,11 +446,10 @@
   <!-- BARBA CONTAINER: CONTACT -->
   <div data-barba-namespace="Contact" data-barba="container" class="page-wrap">
     <main class="content-wrap">
-      
+
       <!-- HERO SECTION -->
-      <div class="subpage_hero">
-        <div class="subpage_hero-bg"></div>
-        <div class="subpage_hero-content">
+      <div bg="hero" class="section_hero">
+        <div class="hero-content">
           <div class="hero-content_left">
             <div class="eyebrows" style="margin-bottom: 2em;">
               <div class="is-eyebrow"><span class="eyebrow-s">S.03</span></div>
@@ -393,15 +464,33 @@
           </div>
           <div class="hero-content_right">
             <p class="body-m" style="max-width: 32em; color: rgba(255, 255, 255, 0.7); line-height: 1.8;">
-              엔터프라이즈 통합 인프라, 차세대 클라우드 POS/ERP 구축, 고성능 트랜잭션 엔진에 관한 모든 문의를 환영합니다. 전문 수석 엔지니어가 24시간 이내에 직접 분석 및 맞춤 제안을 전달해 드립니다.
+              엔터프라이즈 통합 인프라, 차세대 클라우드 POS/ERP 구축, 고성능 트랜잭션 엔진에 관한 모든 문의를 환영합니다. 전문 수석 엔지니어가 24시간 이내에 직접 분석 및 맞춤 제안을 전달해
+              드립니다.
             </p>
+          </div>
+        </div>
+        <div class="hero-background">
+          <div class="background-overlay" style="background:rgba(2,6,23,0.35);z-index:2;position:absolute;inset:0;">
+          </div>
+          <div class="background-inner" style="width:100%;height:100%;position:relative;">
+            <div class="is-video w-embed" style="width:100%;height:100%;">
+              <div class="background_video w-background-video w-background-video-atom"
+                style="width:100%;height:100%;background:#020617;">
+                <video id="hero-bg-video" data-cominvi-hero-intro-video="true" autoplay loop muted playsinline
+                  src="assets/mp4/contact_join_opt.mp4" onloadedmetadata="this.playbackRate=0.75;"
+                  onplay="this.playbackRate=0.75;" style="width:100%;height:100%;object-fit:cover;display:block;"
+                  data-wf-ignore="true" data-object-fit="cover">
+                  <source src="assets/mp4/contact_join_opt.mp4" type="video/mp4" data-wf-ignore="true">
+                </video>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- MAIN SECTION: CONTACT INTERFACE -->
       <div style="padding: 7em var(--_spacings---site-margin, 2em); background: #020617;">
-        
+
         <div class="contact-layout">
           <!-- LEFT COLUMN: DIRECT CONTACT SPECIFICATION -->
           <div class="contact-info_card">
@@ -409,7 +498,7 @@
               <div class="is-eyebrow" style="margin-bottom: 2em;">
                 <span class="eyebrow-s">OFFICE &amp; DIRECT CHANNELS</span>
               </div>
-              
+
               <div class="contact-info_item">
                 <div class="contact-info_label">Headquarters Address</div>
                 <div class="contact-info_val">
@@ -436,7 +525,8 @@
 
               <div class="contact-info_item">
                 <div class="contact-info_label">Global Geolocation Coordinates</div>
-                <div class="contact-info_val" style="font-family: monospace; font-size: 0.95em; color: rgba(0, 229, 255, 0.9);">
+                <div class="contact-info_val"
+                  style="font-family: monospace; font-size: 0.95em; color: rgba(0, 229, 255, 0.9);">
                   LAT 37°39'28.4"N · LONG 126°46'32.8"E<br />
                   ELEVATION 28M · ZONE ASIA/SEOUL
                 </div>
@@ -445,8 +535,10 @@
 
             <div style="margin-top: 3em; padding-top: 2em; border-top: 1px solid rgba(255,255,255,0.08);">
               <div style="display: flex; align-items: center; gap: 0.8em;">
-                <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #00e5ff; box-shadow: 0 0 10px #00e5ff;"></span>
-                <span style="font-size: 0.85em; color: rgba(255, 255, 255, 0.7); letter-spacing: 0.05em;">SYSTEM &amp; NETWORK STATUS : 100% OPERATIONAL</span>
+                <span
+                  style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #00e5ff; box-shadow: 0 0 10px #00e5ff;"></span>
+                <span style="font-size: 0.85em; color: rgba(255, 255, 255, 0.7); letter-spacing: 0.05em;">SYSTEM &amp;
+                  NETWORK STATUS : 100% OPERATIONAL</span>
               </div>
             </div>
           </div>
@@ -460,7 +552,8 @@
               Project Scope &amp; Tech Requirements
             </h2>
 
-            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('정상적으로 문의가 접수되었습니다. 담당 엔지니어가 신속히 연락드리겠습니다.');">
+            <form action="#" method="POST"
+              onsubmit="event.preventDefault(); alert('정상적으로 문의가 접수되었습니다. 담당 엔지니어가 신속히 연락드리겠습니다.');">
               <div class="form-group-row">
                 <div class="form-group">
                   <label for="name" class="form-label">Full Name / 담당자 성함 *</label>
@@ -496,19 +589,23 @@
 
               <div class="form-group">
                 <label for="message" class="form-label">Project Details / 세부 문의 및 프로젝트 내용 *</label>
-                <textarea id="message" required class="form-textarea" placeholder="현재 시스템 구성 환경, 예상 트래픽 규모, 프로젝트 목표 일정 등을 간략히 기재해 주시면 보다 정확한 진단과 견적이 가능합니다."></textarea>
+                <textarea id="message" required class="form-textarea"
+                  placeholder="현재 시스템 구성 환경, 예상 트래픽 규모, 프로젝트 목표 일정 등을 간략히 기재해 주시면 보다 정확한 진단과 견적이 가능합니다."></textarea>
               </div>
 
               <div style="margin: 1.5em 0; display: flex; align-items: flex-start; gap: 0.8em;">
-                <input type="checkbox" id="privacy-agree" required style="margin-top: 0.25em; accent-color: #00e5ff; cursor: pointer;" />
-                <label for="privacy-agree" style="font-size: 0.85em; color: rgba(255, 255, 255, 0.6); line-height: 1.5; cursor: pointer;">
+                <input type="checkbox" id="privacy-agree" required
+                  style="margin-top: 0.25em; accent-color: #00e5ff; cursor: pointer;" />
+                <label for="privacy-agree"
+                  style="font-size: 0.85em; color: rgba(255, 255, 255, 0.6); line-height: 1.5; cursor: pointer;">
                   문의 응대 및 프로젝트 상담을 위한 개인정보 수집 및 이용에 동의합니다. (개인정보는 상담 목적 외에 사용되지 않습니다.)
                 </label>
               </div>
 
               <button type="submit" class="submit-btn">
                 <span>Send Consultation Request</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
@@ -520,37 +617,55 @@
         <!-- 3 QUICK CHANNELS CARDS -->
         <div class="channel-cards">
           <div class="channel-card">
-            <div style="font-size: 0.8em; letter-spacing: 0.1em; color: rgba(0,229,255,0.8); font-weight: 700; margin-bottom: 1em;">CHANNEL 01</div>
-            <h3 style="font-size: 1.25em; font-weight: 700; color: var(--white); margin-bottom: 0.5em;">Enterprise Consulting</h3>
-            <p style="font-size: 0.9em; color: rgba(255,255,255,0.65); line-height: 1.6;">신규 서비스 런칭 또는 레거시 시스템 마이그레이션을 위한 전문 아키텍트의 1:1 심층 컨설팅.</p>
+            <div
+              style="font-size: 0.8em; letter-spacing: 0.1em; color: rgba(0,229,255,0.8); font-weight: 700; margin-bottom: 1em;">
+              CHANNEL 01</div>
+            <h3 style="font-size: 1.25em; font-weight: 700; color: var(--white); margin-bottom: 0.5em;">Enterprise
+              Consulting</h3>
+            <p style="font-size: 0.9em; color: rgba(255,255,255,0.65); line-height: 1.6;">신규 서비스 런칭 또는 레거시 시스템 마이그레이션을
+              위한 전문 아키텍트의 1:1 심층 컨설팅.</p>
           </div>
 
           <div class="channel-card">
-            <div style="font-size: 0.8em; letter-spacing: 0.1em; color: rgba(0,229,255,0.8); font-weight: 700; margin-bottom: 1em;">CHANNEL 02</div>
-            <h3 style="font-size: 1.25em; font-weight: 700; color: var(--white); margin-bottom: 0.5em;">Technical Partnership</h3>
-            <p style="font-size: 0.9em; color: rgba(255,255,255,0.65); line-height: 1.6;">하드웨어 벤더, 금융 PG사, 글로벌 클라우드 파트너십 구축 및 기술 라이선스 제휴 문의.</p>
+            <div
+              style="font-size: 0.8em; letter-spacing: 0.1em; color: rgba(0,229,255,0.8); font-weight: 700; margin-bottom: 1em;">
+              CHANNEL 02</div>
+            <h3 style="font-size: 1.25em; font-weight: 700; color: var(--white); margin-bottom: 0.5em;">Technical
+              Partnership</h3>
+            <p style="font-size: 0.9em; color: rgba(255,255,255,0.65); line-height: 1.6;">하드웨어 벤더, 금융 PG사, 글로벌 클라우드 파트너십
+              구축 및 기술 라이선스 제휴 문의.</p>
           </div>
 
           <div class="channel-card">
-            <div style="font-size: 0.8em; letter-spacing: 0.1em; color: rgba(0,229,255,0.8); font-weight: 700; margin-bottom: 1em;">CHANNEL 03</div>
-            <h3 style="font-size: 1.25em; font-weight: 700; color: var(--white); margin-bottom: 0.5em;">24/7 Operations Desk</h3>
-            <p style="font-size: 0.9em; color: rgba(255,255,255,0.65); line-height: 1.6;">도입 고객사를 위한 전담 비상 관제 센터 및 긴급 인프라 대응 핫라인 상시 가동.</p>
+            <div
+              style="font-size: 0.8em; letter-spacing: 0.1em; color: rgba(0,229,255,0.8); font-weight: 700; margin-bottom: 1em;">
+              CHANNEL 03</div>
+            <h3 style="font-size: 1.25em; font-weight: 700; color: var(--white); margin-bottom: 0.5em;">24/7 Operations
+              Desk</h3>
+            <p style="font-size: 0.9em; color: rgba(255,255,255,0.65); line-height: 1.6;">도입 고객사를 위한 전담 비상 관제 센터 및 긴급
+              인프라 대응 핫라인 상시 가동.</p>
           </div>
         </div>
 
       </div>
 
       <!-- NEXT PAGE TRANSITION BANNER (CIRCUIT TO HOME) -->
-      <div class="section_next" style="position: relative; overflow: hidden; background: #000; border-top: 1px solid rgba(255,255,255,0.1);">
-        <a pt-next="" href="index_flux.html" class="next_link w-inline-block" style="display: block; padding: 6em var(--_spacings---site-margin, 2em); text-decoration: none; color: var(--white); transition: all 0.4s ease;">
-          <div class="next_content" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2em;">
+      <div class="section_next"
+        style="position: relative; overflow: hidden; background: #000; border-top: 1px solid rgba(255,255,255,0.1);">
+        <a pt-next="" href="index_flux.html" class="next_link w-inline-block"
+          style="display: block; padding: 6em var(--_spacings---site-margin, 2em); text-decoration: none; color: var(--white); transition: all 0.4s ease;">
+          <div class="next_content"
+            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2em;">
             <div>
-              <div class="is-eyebrow" style="margin-bottom: 1em;"><span class="eyebrow-s">RETURN TO OVERVIEW →</span></div>
+              <div class="is-eyebrow" style="margin-bottom: 1em;"><span class="eyebrow-s">RETURN TO OVERVIEW →</span>
+              </div>
               <h2 class="title-big" style="margin: 0; color: var(--white);">WINHUB DIGITAL PLATFORM</h2>
               <p class="body-m" style="margin-top: 0.8em; opacity: 0.6;">엔터프라이즈 디지털 아키텍처 홈으로 돌아가기</p>
             </div>
-            <div style="width: 4.5em; height: 4.5em; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); display: flex; align-items: center; justify-content: center;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <div
+              style="width: 4.5em; height: 4.5em; border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); display: flex; align-items: center; justify-content: center;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
@@ -588,9 +703,13 @@
                 <path d="M92.4678 7.62695H90.7988V17.895H92.4678V7.62695Z" fill="var(--white)" class="logo-path"></path>
               </svg></a>
             <div class="footer_socials">
-              <a href="https://www.linkedin.com/company/cominvi/" target="_blank" class="footer_social-link w-inline-block">
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 26 26" fill="none" class="social-logo is-footer">
-                  <path d="M19.9805 0.734375H5.98047C3.21947 0.734375 0.980469 2.97338 0.980469 5.73438V19.7344C0.980469 22.4954 3.21947 24.7344 5.98047 24.7344H19.9805C22.7425 24.7344 24.9805 22.4954 24.9805 19.7344V5.73438C24.9805 2.97338 22.7425 0.734375 19.9805 0.734375ZM8.98047 19.7344H5.98047V8.73438H8.98047V19.7344ZM7.48047 7.46637C6.51447 7.46637 5.73047 6.67637 5.73047 5.70237C5.73047 4.72837 6.51447 3.93837 7.48047 3.93837C8.44647 3.93837 9.23047 4.72837 9.23047 5.70237C9.23047 6.67637 8.44747 7.46637 7.48047 7.46637ZM20.9805 19.7344H17.9805V14.1304C17.9805 10.7624 13.9805 11.0174 13.9805 14.1304V19.7344H10.9805V8.73438H13.9805V10.4994C15.3765 7.91338 20.9805 7.72238 20.9805 12.9754V19.7344Z" fill="#1E1E1E"></path>
+              <a href="https://www.linkedin.com/company/cominvi/" target="_blank"
+                class="footer_social-link w-inline-block">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 26 26" fill="none"
+                  class="social-logo is-footer">
+                  <path
+                    d="M19.9805 0.734375H5.98047C3.21947 0.734375 0.980469 2.97338 0.980469 5.73438V19.7344C0.980469 22.4954 3.21947 24.7344 5.98047 24.7344H19.9805C22.7425 24.7344 24.9805 22.4954 24.9805 19.7344V5.73438C24.9805 2.97338 22.7425 0.734375 19.9805 0.734375ZM8.98047 19.7344H5.98047V8.73438H8.98047V19.7344ZM7.48047 7.46637C6.51447 7.46637 5.73047 6.67637 5.73047 5.70237C5.73047 4.72837 6.51447 3.93837 7.48047 3.93837C8.44647 3.93837 9.23047 4.72837 9.23047 5.70237C9.23047 6.67637 8.44747 7.46637 7.48047 7.46637ZM20.9805 19.7344H17.9805V14.1304C17.9805 10.7624 13.9805 11.0174 13.9805 14.1304V19.7344H10.9805V8.73438H13.9805V10.4994C15.3765 7.91338 20.9805 7.72238 20.9805 12.9754V19.7344Z"
+                    fill="#1E1E1E"></path>
                 </svg>
               </a>
             </div>
@@ -609,7 +728,9 @@
               <ul role="list" class="footer-links w-list-unstyled">
                 <li><a pt-inner="" href="contact.html" class="footer-link">Contact</a></li>
                 <li><a href="mailto:contact@winhub.co.kr" class="footer-link">contact@winhub.co.kr</a></li>
-                <li><p class="footer-link">031-908-7711</p></li>
+                <li>
+                  <p class="footer-link">031-908-7711</p>
+                </li>
               </ul>
             </div>
           </div>

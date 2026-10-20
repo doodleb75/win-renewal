@@ -1,0 +1,85 @@
+=== SLIDE 2 ===
+  Shape 0: 
+  Text 1: WINHUB 웹사이트 리뉴얼 통합 기획서
+  Text 2: 기획서 구성 및 목차
+  Text 3: 기획서 구성 및 목차
+  Text 4: 차세대 인터랙티브 기술 분석부터 5단계 스토리보드, 비디오 에셋 연동 및 실행 계획까지
+  Shape 5: 
+  Shape 6: 
+  Shape 9: 
+  Shape 10: 
+  Text 11: PART I
+  Text 12: 기획 개요 및 리뉴얼 추진 배경
+  Text 13: · 정적 카탈로그 웹의 한계와 인터랙티브 SPA로의 전환
+  Text 13: · 3D 비주얼(3D WebGL) & 차세대 인터랙티브(엔지니어링 신뢰) 통합 모델
+  Shape 14: 
+  Shape 15: 
+  Text 16: PART II
+  Text 17: 차세대 인터랙티브 딥다이브 분석 보고서 이식
+  Text 18: · 영구 지속형 헤더 및 비동기 PJAX 화면 전환 라이프사이클
+  Text 18: · 관성 버추얼 스크롤(Lenis) & 뷰포트 핀 고정(Pinning & Scrubbing)
+  Text 18: · 공간 배치 혁신: '카드 박스 배제' vs '1px 건축적 헤어라인 그리드'
+  Shape 19: 
+  Shape 20: 
+  Text 21: PART III
+  Text 22: 정보구조(IA) & GNB 4대 메뉴 체계
+  Text 23: · GNB 4대 고정 구조: [ Home · About Us · Works · Contact Us ]
+  Text 23: · 풀스크린 에디토리얼 커튼 드로어 메뉴 인터랙션 명세
+  Shape 24: 
+  Shape 25: 
+  Text 26: PART IV
+  Text 27: 메인(Home) 5단계 스토리텔링 화면설계
+  Text 28: · Hero: futuristic_key.mp4 미래지향적 비디오 게이트웨이 연동
+  Text 28: · S.01~S.02: 심플 SVG(AI 칩셋·레이더) 모션 & 앰비언트 무드 배경
+  Text 28: · S.03~S.05: 차세대 인터랙티브 2x3 수치 그리드 & 실적 쇼케이스 CTA
+  Shape 29: 
+  Shape 30: 
+  Text 31: PART V
+  Text 32: 서브페이지 상세 화면설계 및 적용방안
+  Text 33: · About Us (기업 비전 & 연혁 타임라인)
+  Text 33: · Works List & Detail (ABC마트 등 3단 심층 아키텍처)
+  Text 33: · Contact Us (온라인 견적 의뢰 & 카카오맵 연동)
+  Shape 34: 
+  Shape 35: 
+  Text 36: PART VI
+  Text 37: 카피라이팅 시스템, 기술 규격 및 로드맵
+  Text 38: · 5단계 통합 국/영문 심볼릭 카피라이팅 매트릭스
+  Text 38: · Three.js, GSAP 3.12, Video Player 기술 파이프라인
+  Text 38: · 4단계 구축 및 런칭 마일스톤 (Phase 1 ~ Phase 4)
+  Footer_PageNumber_2: - 2 -
+=== SLIDE 3 ===
+  Shape 0: 
+  Text 1: WINHUB 웹사이트 리뉴얼 통합 기획서
+  Text 2: 핵심 기획 요약
+  Text 3: 패러다임의 전환: 단순 홍보 웹에서 '스토리텔링 SPA'로
+  Text 4: 기존 SI/IT 기업 웹사이트의 한계를 극복하고 고객의 몰입을 이끄는 스토리텔링의 본질
+  Shape 5: 
+  Shape 6: 
+  Shape 9: 
+  Shape 10: 
+  Text 11: BEFORE
+  Text 12: 기존의 정적 웹사이트 (Static Catalog)
+  Text 13: 단순 기능 나열 및 카탈로그식 접근
+  Shape 14: 
+  Text 15: · 수많은 텍스트와 박스형 카드들이 무분별하게 나열됨
+  Text 15: · 방문자는 5초 이내에 지루함을 느끼고 이탈
+  Text 15: · 기업이 가진 기술적 깊이와 문제 해결 능력을 체감하기 어려움
+  Shape 16: 
+  Shape 17: 
+  Text 18: WHY STORYTELLING
+  Text 19: 스토리텔링의 마법 (Narrative Immersion)
+  Text 20: 스크롤 = 사용자가 직접 전개하는 탐험
+  Shape 21: 
+  Text 22: · 스크롤 다운이 단순 화면 넘김이 아닌 '스토리의 다음 챕터'를 여는 트리거로 작동
+  Text 22: · '문제 제기 → 기술 아키텍처 → 정밀 솔루션 → 신뢰 증명 → 통합 시너지'로 이어지는 극적 긴장감 형성
+  Text 22: · 사용자가 회사의 기술 여정에 동참하는 경험 선사
+  Shape 23: 
+  Shape 24: 
+  Text 25: AFTER
+  Text 26: WINHUB 차세대 SPA (Interactive Hub)
+  Text 27: 시네마틱 3D 비주얼 + 엔터프라이즈 신뢰 지표
+  Shape 28: 
+  Text 29: · futuristic_key.mp4 비디오와 Three.js가 시각적 압도감 제공
+  Text 29: · 99.98% 가동률, 50+ 대기업 레퍼런스 등 구체적 수치로 설득
+  Text 29: · 강력한 B2B 프로젝트 제안 문의 전환(Conversion) 창출
+  Footer_PageNumber_3: - 3 -

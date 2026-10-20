@@ -1,0 +1,66 @@
+o" class="body-xl">Home</span></div>
+      </div>
+    </div>
+  </div>
+  <div data-barba-namespace="home" data-barba="container" class="page-wrap">
+    <main class="content-wrap">
+      <div bg="hero" class="section_hero">
+        <div class="hero-content">
+          <div id="w-node-_33e34690-9048-f1cc-5996-0de4203dfa95-3e31b7cd" class="hero-content_left">
+            <h1 class="h1">
+              <div class="is-h1-span-wrap"><span class="is-h1-span">CONNECTS TO EMPOWER</span></div>
+              <div class="is-h1-span-wrap"><span class="is-h1-span">YOUR SUCCESS</span></div>
+            </h1>
+          </div>
+          <div id="w-node-d266290a-7a8e-7d09-a7fa-5980aea0fe37-3e31b7cd" class="hero-content_right">
+            <div class="content_right-row">
+              <div class="is-h1-span-wrap"><span class="eyebrow-l">DIGITAL GATEWAY</span></div>
+            </div>
+            <div class="content_right-row">
+              <div class="is-h1-span-wrap"><span class="eyebrow-l">2026 ARCHITECTURE</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <div id="w-node-_42ea3a62-822e-6ecd-fc2c-be4898e5c13b-3e31b7cd" class="w-layout-hflex hero-bottom_cards">
+            <div id="w-node-_42ea3a62-822e-6ecd-fc2c-be4898e5c13c-3e31b7cd"
+              class="w-layout-hflex hero-bottom_cards-wrapper"><a href="#about" class="card w-inline-block"><img
+                  src="https://cdn.prod.website-files.com/6899a2f3f7995d5e3e31b7c6/68bea9279852844c803cd970_our-services-sm.avif"
+                  loading="lazy"
+                  alt="Two miners wearing helmets with lights and protective masks inside a dark mine tunnel, one holding a device."
+                  class="card_bg" />
+                <div class="button-sm">
+                  <div class="button-sm_inner">
+                    <div class="w-layout-hflex button-sm_inner-left"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="100%" viewBox="0 0 6 11" fill="none" class="is-arrow is-right">
+                        <path
+                          d="M0.343262 1.60947C0.343262 1.01554 1.06136 0.718095 1.48133 1.13807L5.52871 5.18545C5.78906 5.4458 5.78906 5.86791 5.52871 6.12826L1.48133 10.1756C1.06136 10.5956 0.343262 10.2982 0.343262 9.70423V1.60947Z"
+                          fill="#151515"></path>
+                      </svg><span class="button-sm_label">About Us</span></div><svg xmlns="http://www.w3.org/2000/svg"
+                      width="100%" viewBox="0 0 6 11" fill="none" class="is-arrow">
+                      <path
+                        d="M0.343262 1.60947C0.343262 1.01554 1.06136 0.718095 1.48133 1.13807L5.52871 5.18545C5.78906 5.4458 5.78906 5.86791 5.52871 6.12826L1.48133 10.1756C1.06136 10.5956 0.343262 10.2982 0.343262 9.70423V1.60947Z"
+                        fill="#151515"></path>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+              <link rel="prefetch" href="contact.html" /><a href="#services" class="card w-inline-block"><img
+                  src="https://cdn.prod.website-files.com/6899a2f3f7995d5e3e31b7c6/6a85ba433ab903950f39215d_technology-min.avif"
+                  loading="lazy" sizes="100vw"
+                  srcset="https://cdn.prod.website-files.com/6899a2f3f7995d5e3e31b7c6/6a85ba433ab903950f39215d_technology-min-p-500.avif 500w, https://cdn.prod.website-files.com/6899a2f3f7995d5e3e31b7c6/6a85ba433ab903950f39215d_technology-min.avif 520w"
+                  alt="Technology" class="card_bg" />
+                <div class="button-sm">
+                  <div class="button-sm_inner">
+                    <div class="w-layout-hflex button-sm_inner-left"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="100%" viewBox="0 0 6 11" fill="none" class="is-arrow is-right">
+                        <path
+                          d="M0.343262 1.60947C0.343262 1.01554 1.06136 0.718095 1.48133 1.13807L5.52871 5.18545C5.78906 5.4458 5.78906 5.86791 5.52871 6.12826L1.48133 10.1756C1.06136 10.5956 0.343262 10.2982 0.343262 9.70423V1.60947Z"
+                          fill="#151515"></path>
+                      </svg><span class="button-sm_label">Works</span></div><svg xmlns="http://www.w3.org/2000/svg"
+                      width="100%" viewBox="0 0 6 11" fill="none" class="is-arrow">
+                      <path
+                        d="M0.343262 1.60947C0.343262 1.01554 1.06136 0.718095 1.48133 1.13807L5.52871 5.18545C5.78906 5.4458 5.78906 5.86791 5.52871 6.12826L1.48133 10.1756C1.06136 10.5956 0.343262 10.2982 0.343262 9.70423V1.60947Z"
+                        fill="#151515"></path>
+                    </svg>
+         
